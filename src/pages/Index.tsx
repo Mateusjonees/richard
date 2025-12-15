@@ -13,6 +13,9 @@ import MobileNav from "@/components/MobileNav";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import { FAQ } from "@/components/FAQ";
+import { Newsletter } from "@/components/Newsletter";
+import { ScheduleButton } from "@/components/ScheduleButton";
 const Index = () => {
   return <div className="min-h-screen bg-background">
       {/* Header */}
@@ -38,15 +41,23 @@ const Index = () => {
                 <a href="#servicos" className="text-foreground hover:text-primary transition-smooth hover:scale-105">
                   Áreas de Atuação
                 </a>
+                <Link to="/blog" className="text-foreground hover:text-primary transition-smooth hover:scale-105">
+                  Blog
+                </Link>
                 <a href="#contato" className="text-foreground hover:text-primary transition-smooth hover:scale-105">
                   Contato
                 </a>
               </div>
-              <Button asChild variant="blue" size="sm" className="animate-slide-in-right hover:animate-bounce-subtle">
-                <a href="https://api.whatsapp.com/send/?phone=5581999777157&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
-                  WhatsApp
-                </a>
-              </Button>
+              <div className="flex items-center gap-4">
+                <Button asChild variant="outline" size="sm" className="animate-fade-in hover:animate-bounce-subtle">
+                  <ScheduleButton size="sm" className="gap-2" />
+                </Button>
+                <Button asChild variant="blue" size="sm" className="animate-slide-in-right hover:animate-bounce-subtle">
+                  <a href="https://api.whatsapp.com/send/?phone=5581999777157&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                    WhatsApp
+                  </a>
+                </Button>
+              </div>
             </div>
 
             {/* Mobile Navigation */}
@@ -709,6 +720,10 @@ const Index = () => {
       </section>
 
       <Testimonials />
+
+      <FAQ />
+
+      <Newsletter />
 
       <Footer />
 

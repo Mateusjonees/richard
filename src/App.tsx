@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import DireitoConsumidor from "./pages/DireitoConsumidor";
 import ContratosNegociacoes from "./pages/ContratosNegociacoes";
 import AcoesJudiciais from "./pages/AcoesJudiciais";
+import { BlogPage } from "./pages/Blog";
 import FAQSchema from "./components/FAQSchema";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/direito-consumidor" element={<DireitoConsumidor />} />
             <Route path="/contratos-negociacoes" element={<ContratosNegociacoes />} />
             <Route path="/acoes-judiciais" element={<AcoesJudiciais />} />
+            <Route path="/blog" element={<BlogPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
