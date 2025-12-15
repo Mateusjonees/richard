@@ -9,6 +9,7 @@ import DireitoConsumidor from "./pages/DireitoConsumidor";
 import ContratosNegociacoes from "./pages/ContratosNegociacoes";
 import AcoesJudiciais from "./pages/AcoesJudiciais";
 import { BlogPage } from "./pages/Blog";
+import { SobreRichardPage } from "./pages/SobreRichard";
 import FAQSchema from "./components/FAQSchema";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/sobre-richard" element={<SobreRichardPage />} />
             <Route path="/direito-consumidor" element={<DireitoConsumidor />} />
             <Route path="/contratos-negociacoes" element={<ContratosNegociacoes />} />
             <Route path="/acoes-judiciais" element={<AcoesJudiciais />} />
