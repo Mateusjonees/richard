@@ -303,32 +303,40 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-20 bg-accent">
+      <section id="sobre" className="py-20 bg-gradient-to-br from-accent via-white to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16 animate-fade-in-up">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
-                Sobre o <span className="text-primary">Advogado</span>
+            <div className="text-center mb-20 animate-fade-in-up">
+              <div className="inline-block bg-primary/10 border border-primary/30 rounded-full px-6 py-2 mb-6">
+                <p className="text-primary font-semibold text-sm uppercase tracking-wider">Sobre o Profissional</p>
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+                Conheça o <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Dr. Richard Rodrigues</span>
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                Dr. Richard Rodrigues, com sólida experiência em Direito do Consumidor e formação especializada, oferece
-                assessoria jurídica personalizada com dedicação exclusiva a cada cliente.
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                Advogado especialista com 3+ anos de experiência dedicados à excelência jurídica, proteção de direitos e 
+                conquista de resultados transformadores para seus clientes em Pernambuco.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
               {/* Professional Photo */}
               <div className="order-2 lg:order-1 animate-slide-in-left">
-                <div className="relative">
-                  <div className="bg-gradient-blue p-1 rounded-2xl shadow-blue hover:animate-glow transition-smooth">
-                    <img src={drRichardImage} alt="Dr. Richard Rodrigues - Advogado Especialista em Direito do Consumidor" className="w-full h-[500px] object-cover rounded-xl hover:scale-105 transition-smooth" />
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                  <div className="relative bg-gradient-to-br from-primary/10 to-blue-600/10 p-2 rounded-3xl border border-primary/20">
+                    <div className="rounded-2xl overflow-hidden shadow-2xl">
+                      <img src={drRichardImage} alt="Dr. Richard Rodrigues - Advogado Especialista em Direito do Consumidor" className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
                   </div>
-                  <div className="absolute -bottom-6 -right-6 bg-card rounded-xl p-4 shadow-elegant border border-primary/20 animate-scale-in hover:scale-110 transition-smooth">
-                    <div className="flex items-center space-x-3">
-                      <img alt="Dr. Richard Rodrigues Logo" src="/lovable-uploads/2077a1fe-0f0f-4fa2-aa85-56ae20fec203.png" className="h-10 w-10 animate-bounce-subtle" />
+                  <div className="absolute -bottom-8 -right-8 bg-gradient-to-br from-primary to-blue-600 rounded-2xl p-6 shadow-2xl border border-white/20 animate-scale-in hover:scale-110 transition-transform duration-300">
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-white/20 p-3 rounded-lg backdrop-blur-md">
+                        <Award className="h-8 w-8 text-white" />
+                      </div>
                       <div>
-                        <p className="text-sm font-semibold text-primary">OAB/PE</p>
-                        <p className="text-xs text-muted-foreground">Registro Ativo</p>
+                        <p className="text-white font-bold text-lg">OAB/PE</p>
+                        <p className="text-white/80 text-sm">Ativo e Especializado</p>
                       </div>
                     </div>
                   </div>
@@ -336,68 +344,84 @@ const Index = () => {
               </div>
 
               {/* Professional Information */}
-              <div className="order-1 lg:order-2 space-y-8 animate-slide-in-right">
+              <div className="order-1 lg:order-2 space-y-10 animate-slide-in-right">
                 <div className="animate-fade-in-up">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Dr. Richard Rodrigues</h3>
+                  <h3 className="text-3xl font-bold text-foreground mb-4">
+                    <span className="text-primary">Expertise</span> Jurídica Reconhecida
+                  </h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                    Advogado especialista com ampla experiência em Direito do Consumidor, Direito Contratual e Ações
-                    Judiciais. Comprometido em oferecer soluções jurídicas eficazes e personalizadas para cada cliente.
+                    Com mais de 3 anos de prática intensiva, o Dr. Richard Rodrigues consolidou-se como referência em 
+                    Direito do Consumidor, Contratos e Ações Judiciais em Pernambuco.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    Com uma abordagem consultiva e estratégica, trabalha incansavelmente na proteção dos direitos dos
-                    seus clientes, buscando sempre os melhores resultados através de negociações inteligentes e
-                    representação judicial competente.
+                    Sua abordagem estratégica, combinada com dedição aos clientes e profundo conhecimento jurídico, 
+                    resultou em uma taxa de sucesso superior a 90%, transformando vidas e protegendo patrimônios.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-scale-in">
-                  <div className="bg-card rounded-lg p-4 shadow-elegant border border-primary/10 hover:shadow-blue transition-smooth hover:scale-105">
-                    <div className="flex items-center space-x-3">
-                      <div className="bg-gradient-blue p-2 rounded-lg">
-                        <GraduationCap className="h-5 w-5 text-primary-foreground animate-float" />
+                {/* Timeline/Expertise Cards */}
+                <div className="space-y-4 animate-scale-in">
+                  {/* Card 1 */}
+                  <div className="group bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-2xl p-6 border border-primary/20 hover:border-primary/50 hover:shadow-lg transition-all duration-300 hover:scale-102 cursor-pointer">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-gradient-to-br from-primary to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                        <GraduationCap className="h-6 w-6 text-white" />
                       </div>
-                      <div>
-                        <p className="text-sm font-semibold text-primary">Formação</p>
-                        <p className="text-xs text-muted-foreground">Direito Civil</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-card rounded-lg p-4 shadow-elegant border border-primary/10 hover:shadow-blue transition-smooth hover:scale-105">
-                    <div className="flex items-center space-x-3">
-                      <div className="bg-gradient-blue p-2 rounded-lg">
-                        <Star className="h-5 w-5 text-primary-foreground animate-float" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-primary">Especialização</p>
-                        <p className="text-xs text-muted-foreground">Direito Consumidor</p>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-foreground mb-1 text-lg">Formação Sólida</h4>
+                        <p className="text-muted-foreground text-sm">Curso de Direito com especialização em Direito Civil e Consumidor. Formação contínua em tendências jurídicas.</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-card rounded-lg p-4 shadow-elegant border border-primary/10 hover:shadow-blue transition-smooth hover:scale-105">
-                    <div className="flex items-center space-x-3">
-                      <div className="bg-gradient-blue p-2 rounded-lg">
-                        <Calendar className="h-5 w-5 text-primary-foreground animate-float" />
+                  {/* Card 2 */}
+                  <div className="group bg-gradient-to-r from-blue-500/10 to-primary/10 rounded-2xl p-6 border border-primary/20 hover:border-primary/50 hover:shadow-lg transition-all duration-300 hover:scale-102 cursor-pointer">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-gradient-to-br from-blue-600 to-primary p-3 rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                        <Shield className="h-6 w-6 text-white" />
                       </div>
-                      <div>
-                        <p className="text-sm font-semibold text-primary">Experiência</p>
-                        <p className="text-xs text-muted-foreground">Consultoria Jurídica</p>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-foreground mb-1 text-lg">Defesa do Consumidor</h4>
+                        <p className="text-muted-foreground text-sm">Especialista em proteger direitos de consumidores contra práticas abusivas e cobranças indevidas.</p>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-card rounded-lg p-4 shadow-elegant border border-primary/10 hover:shadow-blue transition-smooth hover:scale-105">
-                    <div className="flex items-center space-x-3">
-                      <div className="bg-gradient-blue p-2 rounded-lg">
-                        <Award className="h-5 w-5 text-primary-foreground animate-float" />
+                  {/* Card 3 */}
+                  <div className="group bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-2xl p-6 border border-primary/20 hover:border-primary/50 hover:shadow-lg transition-all duration-300 hover:scale-102 cursor-pointer">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-gradient-to-br from-primary to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                        <FileText className="h-6 w-6 text-white" />
                       </div>
-                      <div>
-                        <p className="text-sm font-semibold text-primary">Reconhecimento</p>
-                        <p className="text-xs text-muted-foreground">Resultados Eficazes</p>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-foreground mb-1 text-lg">Consultoria Contratual</h4>
+                        <p className="text-muted-foreground text-sm">Revisão, elaboração e negociação de contratos com segurança jurídica e proteção de interesses.</p>
                       </div>
                     </div>
                   </div>
+
+                  {/* Card 4 */}
+                  <div className="group bg-gradient-to-r from-blue-500/10 to-primary/10 rounded-2xl p-6 border border-primary/20 hover:border-primary/50 hover:shadow-lg transition-all duration-300 hover:scale-102 cursor-pointer">
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-gradient-to-br from-blue-600 to-primary p-3 rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                        <Gavel className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-foreground mb-1 text-lg">Representação Judicial</h4>
+                        <p className="text-muted-foreground text-sm">Ações indenizatórias, danos morais e defesa em processos com estratégia vencedora.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <div className="pt-6">
+                  <Button asChild variant="blue" size="lg" className="text-lg px-8 py-6 w-full sm:w-auto group hover:gap-3">
+                    <a href="https://api.whatsapp.com/send/?phone=5581999777157&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                      Consulte o Especialista
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>
