@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import consumerRights from "@/assets/consumer-rights.jpg";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import InternalMobileNav from "@/components/InternalMobileNav";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Footer from "@/components/Footer";
 
 const DireitoConsumidor = () => {
   return (
@@ -20,6 +22,13 @@ const DireitoConsumidor = () => {
           </nav>
         </div>
       </header>
+
+      {/* Breadcrumb */}
+      <PageBreadcrumb 
+        items={[
+          { label: "Direito do Consumidor" }
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -214,6 +223,8 @@ const DireitoConsumidor = () => {
           </div>
         </div>
       </section>
+      
+      <Footer />
       <FloatingWhatsApp />
     </div>
   );

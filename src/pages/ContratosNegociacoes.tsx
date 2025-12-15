@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import contractLaw from "@/assets/contract-law.jpg";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import InternalMobileNav from "@/components/InternalMobileNav";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Footer from "@/components/Footer";
 
 const ContratosNegociacoes = () => {
   return (
@@ -21,6 +23,13 @@ const ContratosNegociacoes = () => {
           </nav>
         </div>
       </header>
+
+      {/* Breadcrumb */}
+      <PageBreadcrumb 
+        items={[
+          { label: "Contratos & Negociações" }
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -307,6 +316,8 @@ const ContratosNegociacoes = () => {
           </div>
         </div>
       </section>
+      
+      <Footer />
       <FloatingWhatsApp />
     </div>
   );

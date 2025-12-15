@@ -1,0 +1,50 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Dr. Richard Rodrigues",
+  "image": "https://drrichardrodrigues.com/logo-dr-richard.png",
+  "description": "Advogado especialista em Direito do Consumidor, Contratos e Ações Judiciais em Recife-PE",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. do Imperador Pedro II, 346",
+    "addressLocality": "Recife",
+    "addressRegion": "PE",
+    "postalCode": "50010-240",
+    "addressCountry": "BR"
+  },
+  "telephone": "+55 81 99977-7157",
+  "email": "contato@drrichardrodrigues.com",
+  "url": "https://drrichardrodrigues.com",
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "State",
+    "name": "Pernambuco"
+  },
+  "knowsAbout": [
+    "Direito do Consumidor",
+    "Direito Civil",
+    "Contratos",
+    "Ações Judiciais",
+    "Direito Administrativo"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/richardrodrigues.adv",
+    "https://www.linkedin.com/in/richard-rodrigues-6022a0269"
+  ],
+  "jobTitle": "Advogado - OAB/PE",
+  "awards": "Especialista em Direito do Consumidor",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "telephone": "+55 81 99977-7157",
+    "contactOption": "TollFree",
+    "areaServed": "BR",
+    "availableLanguage": "pt-BR"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }
+}

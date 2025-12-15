@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import officeJustice from "@/assets/office-justice.jpg";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import InternalMobileNav from "@/components/InternalMobileNav";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
+import Footer from "@/components/Footer";
 
 const AcoesJudiciais = () => {
   return (
@@ -21,6 +23,13 @@ const AcoesJudiciais = () => {
           </nav>
         </div>
       </header>
+
+      {/* Breadcrumb */}
+      <PageBreadcrumb 
+        items={[
+          { label: "Ações Judiciais" }
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -368,6 +377,8 @@ const AcoesJudiciais = () => {
           </div>
         </div>
       </section>
+      
+      <Footer />
       <FloatingWhatsApp />
     </div>
   );
