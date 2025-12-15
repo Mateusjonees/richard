@@ -1,4 +1,4 @@
-import { Users, FileText, Phone, MapPin, GraduationCap, Calendar, Shield, Award, Star, Instagram, MessageCircle, ExternalLink, Linkedin } from "lucide-react";
+import { Users, FileText, Phone, MapPin, GraduationCap, Calendar, Shield, Award, Star, Instagram, MessageCircle, ExternalLink, Linkedin, Mail, Facebook, Scale, Gavel } from "lucide-react";
 import logoImage from "@/assets/logo-dr-richard.png";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -67,50 +67,90 @@ const Index = () => {
         <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{
         backgroundImage: `url(${luxuryHeroImage})`
       }}></div>
+        
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        </div>
+
         <div className="relative container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-              <span className="text-primary-foreground">Inteligência jurídica</span>{" "}
-              <span className="text-primary-foreground/80">para proteger o que mais importa:</span>{" "}
-              <span className="text-primary-foreground">seus direitos</span>
-            </h1>
-            <p className="text-lg lg:text-xl leading-relaxed max-w-2xl text-primary-foreground/80">
+          <div className="space-y-8 animate-fade-in-up">
+            <div className="space-y-4">
+              <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-semibold">
+                Advocacia Especializada em Recife
+              </span>
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                <span className="text-primary-foreground">Inteligência jurídica</span>{" "}
+                <span className="text-primary-foreground/80">para proteger o que mais importa:</span>{" "}
+                <span className="bg-gradient-to-r from-primary-foreground to-blue-200 bg-clip-text text-transparent">seus direitos</span>
+              </h1>
+            </div>
+            
+            <p className="text-lg lg:text-xl leading-relaxed max-w-2xl text-primary-foreground/85">
               Advogado especialista em{" "}
               <strong className="text-primary-foreground">Direito do Consumidor, contratos e ações judiciais</strong>,
               oferecendo soluções jurídicas personalizadas com foco na{" "}
               <strong className="text-primary-foreground">proteção dos seus direitos</strong>, e na busca pelos melhores
               resultados.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="secondary" size="lg" className="text-lg px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/90" onClick={() => {
-              document.getElementById("servicos")?.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-              });
-            }}>
+            
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <Button 
+                variant="secondary" 
+                size="lg" 
+                className="text-lg px-8 py-7 bg-white text-primary hover:bg-gray-100 font-bold shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg" 
+                onClick={() => {
+                  document.getElementById("servicos")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                  });
+                }}
+              >
                 CONHEÇA NOSSAS SOLUÇÕES
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+              <Button 
+                asChild 
+                variant="outline" 
+                size="lg" 
+                className="text-lg px-8 py-7 border-2 border-white text-white hover:bg-white/20 font-bold rounded-lg transition-all duration-300 backdrop-blur"
+              >
                 <a href="https://api.whatsapp.com/send/?phone=5581999777157&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  WHATSAPP
+                  CHAMAR WHATSAPP
                 </a>
               </Button>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap gap-6 pt-8">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+                <span className="text-sm text-primary-foreground/90">✓ OAB/PE Ativo</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+                <span className="text-sm text-primary-foreground/90">✓ +150 clientes</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+                <span className="text-sm text-primary-foreground/90">✓ 90% de sucesso</span>
+              </div>
             </div>
           </div>
 
           {/* Professional Consumer Law Layout */}
-          <div className="hidden lg:block relative">
+          <div className="hidden lg:block relative animate-slide-in-right">
             <div className="grid grid-cols-2 gap-6 h-[500px]">
               {/* Left Column - Main Office */}
-              <div className="bg-card/20 backdrop-blur rounded-xl shadow-luxury overflow-hidden relative">
-                <div className="absolute inset-0 bg-cover bg-center" style={{
+              <div className="bg-card/20 backdrop-blur rounded-xl shadow-luxury overflow-hidden relative hover:shadow-blue transition-all duration-300 hover:scale-105 group">
+                <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style={{
                 backgroundImage: `url(${consumerLawOffice})`
               }}>
-                  <div className="absolute inset-0 bg-primary/80 flex items-end p-6">
+                  <div className="absolute inset-0 bg-primary/75 group-hover:bg-primary/65 transition-colors duration-300 flex items-end p-6">
                     <div className="text-left">
-                      <h3 className="text-lg font-bold text-primary-foreground mb-2">Escritório Especializado</h3>
-                      <p className="text-sm text-primary-foreground/90 font-medium">Direito do Consumidor</p>
+                      <h3 className="text-lg font-bold text-white mb-2">Escritório Especializado</h3>
+                      <p className="text-sm text-white/90 font-medium">Direito do Consumidor</p>
                     </div>
                   </div>
                 </div>
@@ -119,28 +159,28 @@ const Index = () => {
               {/* Right Column - Split into two */}
               <div className="space-y-6">
                 {/* Consumer Rights */}
-                <div className="bg-card/20 backdrop-blur rounded-xl shadow-luxury overflow-hidden relative h-[235px]">
-                  <div className="absolute inset-0 bg-cover bg-center" style={{
+                <div className="bg-card/20 backdrop-blur rounded-xl shadow-luxury overflow-hidden relative h-[235px] hover:shadow-blue transition-all duration-300 hover:scale-105 group cursor-pointer">
+                  <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style={{
                   backgroundImage: `url(${consumerRights})`
                 }}>
-                    <div className="absolute inset-0 bg-primary/80 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-primary/75 group-hover:bg-primary/65 transition-colors duration-300 flex items-center justify-center">
                       <div className="text-center">
-                        <Users className="h-10 w-10 text-primary-foreground mx-auto mb-2" />
-                        <p className="text-sm font-bold text-primary-foreground">Proteção ao Consumidor</p>
+                        <Users className="h-12 w-12 text-white mx-auto mb-2 group-hover:scale-125 transition-transform" />
+                        <p className="text-sm font-bold text-white">Proteção ao Consumidor</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Contract Law */}
-                <div className="bg-card/20 backdrop-blur rounded-xl shadow-luxury overflow-hidden relative h-[235px]">
-                  <div className="absolute inset-0 bg-cover bg-center" style={{
+                <div className="bg-card/20 backdrop-blur rounded-xl shadow-luxury overflow-hidden relative h-[235px] hover:shadow-blue transition-all duration-300 hover:scale-105 group cursor-pointer">
+                  <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style={{
                   backgroundImage: `url(${contractLaw})`
                 }}>
-                    <div className="absolute inset-0 bg-primary/80 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-primary/75 group-hover:bg-primary/65 transition-colors duration-300 flex items-center justify-center">
                       <div className="text-center">
-                        <FileText className="h-10 w-10 text-primary-foreground mx-auto mb-2" />
-                        <p className="text-sm font-bold text-primary-foreground">Contratos & Negociações</p>
+                        <FileText className="h-12 w-12 text-white mx-auto mb-2 group-hover:scale-125 transition-transform" />
+                        <p className="text-sm font-bold text-white">Contratos & Negociações</p>
                       </div>
                     </div>
                   </div>
@@ -150,38 +190,38 @@ const Index = () => {
 
             {/* Professional Credentials Below */}
             <div className="mt-6 grid grid-cols-3 gap-4">
-              <div className="bg-card/90 backdrop-blur-sm rounded-lg p-4 shadow-elegant border border-primary/20 hover:shadow-blue transition-smooth">
+              <div className="bg-white/10 backdrop-blur-md rounded-lg p-5 shadow-elegant border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-300 hover:scale-105 cursor-pointer">
                 <div className="flex items-center space-x-3">
-                  <div className="bg-gradient-blue p-2 rounded-lg">
-                    <Award className="h-5 w-5 text-primary-foreground" />
+                  <div className="bg-gradient-to-br from-blue-400 to-blue-600 p-3 rounded-lg">
+                    <Award className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-primary">OAB/PE</p>
-                    <p className="text-xs text-muted-foreground">Registro Ativo</p>
+                    <p className="text-sm font-bold text-white">OAB/PE</p>
+                    <p className="text-xs text-white/80">Registro Ativo</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-card/90 backdrop-blur-sm rounded-lg p-4 shadow-elegant border border-primary/20 hover:shadow-blue transition-smooth">
+              <div className="bg-white/10 backdrop-blur-md rounded-lg p-5 shadow-elegant border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-300 hover:scale-105 cursor-pointer">
                 <div className="flex items-center space-x-3">
-                  <div className="bg-gradient-blue p-2 rounded-lg">
-                    <GraduationCap className="h-5 w-5 text-primary-foreground" />
+                  <div className="bg-gradient-to-br from-blue-400 to-blue-600 p-3 rounded-lg">
+                    <GraduationCap className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-primary">Especialista</p>
-                    <p className="text-xs text-muted-foreground">Direito Civil</p>
+                    <p className="text-sm font-bold text-white">Especialista</p>
+                    <p className="text-xs text-white/80">Direito Civil</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-card/90 backdrop-blur-sm rounded-lg p-4 shadow-elegant border border-primary/20 hover:shadow-blue transition-smooth">
+              <div className="bg-white/10 backdrop-blur-md rounded-lg p-5 shadow-elegant border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-300 hover:scale-105 cursor-pointer">
                 <div className="flex items-center space-x-3">
-                  <div className="bg-gradient-blue p-2 rounded-lg">
-                    <Shield className="h-5 w-5 text-primary-foreground" />
+                  <div className="bg-gradient-to-br from-blue-400 to-blue-600 p-3 rounded-lg">
+                    <Shield className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-primary">Consultoria</p>
-                    <p className="text-xs text-muted-foreground">Personalizada</p>
+                    <p className="text-sm font-bold text-white">Consultoria</p>
+                    <p className="text-xs text-white/80">Personalizada</p>
                   </div>
                 </div>
               </div>
@@ -191,49 +231,49 @@ const Index = () => {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-16 bg-background">
+      <section className="py-20 bg-gradient-to-br from-background via-blue-50/10 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center bg-card rounded-xl p-8 shadow-elegant hover:shadow-blue transition-smooth hover:scale-105 border border-primary/10">
-                <div className="bg-gradient-blue p-4 rounded-full w-16 h-16 mx-auto mb-6 shadow-blue">
-                  <Users className="h-8 w-8 text-primary-foreground mx-auto" />
+            <div className="grid md:grid-cols-4 gap-6 mb-16">
+              <div className="text-center bg-gradient-to-br from-blue-50 to-white rounded-2xl p-10 shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-110 border border-blue-100/50 group cursor-pointer">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-5 rounded-full w-20 h-20 mx-auto mb-6 shadow-lg shadow-blue-500/30">
+                  <Users className="h-10 w-10 text-white mx-auto" />
                 </div>
-                <div className="text-3xl font-bold text-primary mb-2">+150</div>
-                <p className="text-foreground font-medium">Clientes atendidos</p>
-                <p className="text-xs text-muted-foreground mt-1">Pessoas que confiaram no nosso trabalho</p>
+                <div className="text-5xl font-bold text-primary mb-2">150+</div>
+                <p className="text-lg font-semibold text-foreground">Clientes Atendidos</p>
+                <p className="text-sm text-muted-foreground mt-2">Pessoas que confiaram no nosso trabalho</p>
               </div>
 
-              <div className="text-center bg-card rounded-xl p-8 shadow-elegant hover:shadow-blue transition-smooth hover:scale-105 border border-primary/10">
-                <div className="bg-gradient-blue p-4 rounded-full w-16 h-16 mx-auto mb-6 shadow-blue">
-                  <GraduationCap className="h-8 w-8 text-primary-foreground mx-auto" />
+              <div className="text-center bg-gradient-to-br from-blue-50 to-white rounded-2xl p-10 shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-110 border border-blue-100/50 group cursor-pointer">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-5 rounded-full w-20 h-20 mx-auto mb-6 shadow-lg shadow-blue-500/30">
+                  <Calendar className="h-10 w-10 text-white mx-auto" />
                 </div>
-                <div className="text-3xl font-bold text-primary mb-2">+3 anos</div>
-                <p className="text-foreground font-medium">De atuação jurídica</p>
-                <p className="text-xs text-muted-foreground mt-1">Experiência em Direito do Consumidor</p>
+                <div className="text-5xl font-bold text-primary mb-2">3+</div>
+                <p className="text-lg font-semibold text-foreground">Anos de Experiência</p>
+                <p className="text-sm text-muted-foreground mt-2">Especialização em Direito do Consumidor</p>
               </div>
 
-              <div className="text-center bg-card rounded-xl p-8 shadow-elegant hover:shadow-blue transition-smooth hover:scale-105 border border-primary/10">
-                <div className="bg-gradient-blue p-4 rounded-full w-16 h-16 mx-auto mb-6 shadow-blue">
-                  <Award className="h-8 w-8 text-primary-foreground mx-auto" />
+              <div className="text-center bg-gradient-to-br from-blue-50 to-white rounded-2xl p-10 shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-110 border border-blue-100/50 group cursor-pointer">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-5 rounded-full w-20 h-20 mx-auto mb-6 shadow-lg shadow-blue-500/30">
+                  <Award className="h-10 w-10 text-white mx-auto" />
                 </div>
-                <div className="text-3xl font-bold text-primary mb-2">+90%</div>
-                <p className="text-foreground font-medium">De êxito</p>
-                <p className="text-xs text-muted-foreground mt-1">Casos com acordos ou decisões favoráveis</p>
+                <div className="text-5xl font-bold text-primary mb-2">90%</div>
+                <p className="text-lg font-semibold text-foreground">de Êxito</p>
+                <p className="text-sm text-muted-foreground mt-2">Acordos ou decisões favoráveis</p>
               </div>
 
-              <div className="text-center bg-card rounded-xl p-8 shadow-elegant hover:shadow-blue transition-smooth hover:scale-105 border border-primary/10">
-                <div className="bg-gradient-blue p-4 rounded-full w-16 h-16 mx-auto mb-6 shadow-blue">
-                  <Shield className="h-8 w-8 text-primary-foreground mx-auto" />
+              <div className="text-center bg-gradient-to-br from-blue-50 to-white rounded-2xl p-10 shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-110 border border-blue-100/50 group cursor-pointer">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-5 rounded-full w-20 h-20 mx-auto mb-6 shadow-lg shadow-blue-500/30">
+                  <Shield className="h-10 w-10 text-white mx-auto" />
                 </div>
-                <div className="text-3xl font-bold text-primary mb-2">100%</div>
-                <p className="text-foreground font-medium">Transparência</p>
-                <p className="text-xs text-muted-foreground mt-1">Cada etapa explicada de forma clara</p>
+                <div className="text-5xl font-bold text-primary mb-2">100%</div>
+                <p className="text-lg font-semibold text-foreground">Transparência</p>
+                <p className="text-sm text-muted-foreground mt-2">Cada etapa explicada com clareza</p>
               </div>
             </div>
 
-            <div className="text-center mt-16 max-w-4xl mx-auto">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-foreground">
+            <div className="text-center mt-16 max-w-4xl mx-auto bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-2xl p-12 border border-primary/20">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
                 ADVOGADO ESPECIALISTA EM <span className="text-primary">PERNAMBUCO</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -241,7 +281,7 @@ const Index = () => {
                 <strong className="text-primary">Direito do Consumidor, Direito Civil e Contratos</strong>, além de
                 forte atuação em <strong className="text-primary">Direito Administrativo</strong>.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed mb-8">
                 Nossa expertise é focada em{" "}
                 <strong className="text-primary">
                   defesa do consumidor, contratos, indenizações, licitações públicas e questões administrativas
@@ -249,8 +289,8 @@ const Index = () => {
                 , entregando segurança jurídica, proteção do patrimônio e soluções estratégicas para nossos clientes em
                 Recife e em diversas cidades de Pernambuco.
               </p>
-              <div className="mt-8 text-center">
-                <Button asChild variant="blue" size="lg" className="text-lg px-8 py-6">
+              <div className="flex justify-center">
+                <Button asChild variant="blue" size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl">
                   <a href="https://api.whatsapp.com/send/?phone=5581999777157&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-5 w-5" />
                     FALE CONOSCO AGORA
@@ -366,216 +406,278 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="servicos" className="py-20 bg-background">
+      <section id="servicos" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
-              Áreas de <span className="text-primary">Atuação</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Oferecemos soluções jurídicas completas e especializadas, sempre priorizando seus direitos e interesses
-              patrimoniais.
-            </p>
-          </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-block bg-primary/10 border border-primary/30 rounded-full px-6 py-2 mb-6">
+                <p className="text-primary font-semibold text-sm uppercase tracking-wider">Nossas Especialidades</p>
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                <span className="text-foreground">Soluções Jurídicas</span>
+                <br />
+                <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Para Seus Problemas</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Com expertise em múltiplas áreas do direito, oferecemos soluções estratégicas para resolver seus conflitos
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link to="/direito-consumidor" className="block">
-              <Card className="bg-card shadow-elegant hover:shadow-blue transition-smooth border-primary/10 group animate-fade-in hover:scale-105 cursor-pointer">
-                <CardHeader>
-                  <div className="bg-gradient-blue p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-smooth animate-float">
-                    <Users className="h-8 w-8 text-primary-foreground" />
-                  </div>
-                  <CardTitle className="text-foreground group-hover:text-primary transition-smooth">
-                    Direito do Consumidor
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">Proteção completa dos seus direitos como consumidor:</p>
-                  <ul className="text-sm space-y-2">
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Produtos defeituosos
-                    </li>
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Serviços inadequados
-                    </li>
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Cobranças indevidas
-                    </li>
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Publicidade enganosa
-                    </li>
-                  </ul>
-                  <div className="mt-4 text-primary text-sm font-medium group-hover:text-secondary transition-smooth">
-                    Clique para saber mais →
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <Link to="/direito-consumidor">
+                <div className="group relative h-full bg-gradient-to-br from-blue-50 to-white rounded-2xl overflow-hidden shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-105 border border-blue-100/50 cursor-pointer">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-            <Link to="/contratos-negociacoes" className="block">
-              <Card className="bg-card shadow-elegant hover:shadow-blue transition-smooth border-primary/10 group animate-fade-in-up hover:scale-105 cursor-pointer">
-                <CardHeader>
-                  <div className="bg-gradient-blue p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-smooth animate-float">
-                    <FileText className="h-8 w-8 text-primary-foreground" />
+                  <div className="relative p-10 h-full flex flex-col justify-between">
+                    <div>
+                      <div className="bg-gradient-to-br from-primary to-blue-600 p-4 rounded-xl w-16 h-16 mb-6 shadow-lg shadow-primary/30">
+                        <FileText className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-foreground mb-4">Direito do Consumidor</h3>
+                      <ul className="space-y-3 mb-6">
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Produtos e serviços defeituosos</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Cobranças indevidas</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Indenizações por danos</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Direitos do consumidor</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <Button className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-lg group-hover:translate-x-1 transition-transform duration-300">
+                        Saiba Mais →
+                      </Button>
+                    </div>
                   </div>
-                  <CardTitle className="text-foreground group-hover:text-primary transition-smooth">
-                    Contratos & Negociações
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">Análise e elaboração de contratos empresariais:</p>
-                  <ul className="text-sm space-y-2">
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Revisão de contratos
-                    </li>
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Negociação de dívidas
-                    </li>
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Acordo extrajudicial
-                    </li>
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Assessoria preventiva
-                    </li>
-                  </ul>
-                  <div className="mt-4 text-primary text-sm font-medium group-hover:text-secondary transition-smooth">
-                    Clique para saber mais →
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+                </div>
+              </Link>
 
-            <Link to="/acoes-judiciais" className="block">
-              <Card className="bg-card shadow-elegant hover:shadow-blue transition-smooth border-primary/10 group animate-scale-in hover:scale-105 cursor-pointer">
-                <CardHeader>
-                  <img src={logoImage} alt="Dr. Richard Rodrigues Logo" className="h-10 w-10 group-hover:scale-110 transition-smooth animate-float" />
-                  <CardTitle className="text-foreground group-hover:text-primary transition-smooth">
-                    Ações Judiciais
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">Representação judicial especializada:</p>
-                  <ul className="text-sm space-y-2">
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Ações indenizatórias
-                    </li>
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Danos morais e materiais
-                    </li>
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Execução de títulos
-                    </li>
-                    <li className="flex items-center text-muted-foreground hover:text-primary transition-smooth">
-                      <span className="text-primary mr-2 font-bold">•</span>Recursos e apelações
-                    </li>
-                  </ul>
-                  <div className="mt-4 text-primary text-sm font-medium group-hover:text-secondary transition-smooth">
-                    Clique para saber mais →
+              <Link to="/contratos-negociacoes">
+                <div className="group relative h-full bg-gradient-to-br from-blue-50 to-white rounded-2xl overflow-hidden shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-105 border border-blue-100/50 cursor-pointer">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  <div className="relative p-10 h-full flex flex-col justify-between">
+                    <div>
+                      <div className="bg-gradient-to-br from-primary to-blue-600 p-4 rounded-xl w-16 h-16 mb-6 shadow-lg shadow-primary/30">
+                        <Scale className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-foreground mb-4">Contratos & Negociações</h3>
+                      <ul className="space-y-3 mb-6">
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Revisão de contratos</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Negociação de débitos</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Elaboração de acordos</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Proteção de direitos</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <Button className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-lg group-hover:translate-x-1 transition-transform duration-300">
+                        Saiba Mais →
+                      </Button>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
-            </Link>
+                </div>
+              </Link>
+
+              <Link to="/acoes-judiciais">
+                <div className="group relative h-full bg-gradient-to-br from-blue-50 to-white rounded-2xl overflow-hidden shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-105 border border-blue-100/50 cursor-pointer">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  <div className="relative p-10 h-full flex flex-col justify-between">
+                    <div>
+                      <div className="bg-gradient-to-br from-primary to-blue-600 p-4 rounded-xl w-16 h-16 mb-6 shadow-lg shadow-primary/30">
+                        <Gavel className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-foreground mb-4">Ações Judiciais</h3>
+                      <ul className="space-y-3 mb-6">
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Ações indenizatórias</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Danos morais</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Execução de títulos</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-primary mr-3 font-bold">✓</span>
+                          <span className="text-muted-foreground">Defesa em ações</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <Button className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-lg group-hover:translate-x-1 transition-transform duration-300">
+                        Saiba Mais →
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-2xl p-12 border border-primary/20 text-center">
+              <h3 className="text-3xl font-bold mb-4 text-foreground">Não encontrou sua necessidade?</h3>
+              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Além das áreas principais, também atuamos em Direito Administrativo, Licitações Públicas e outras questões jurídicas específicas
+              </p>
+              <Button asChild variant="blue" size="lg" className="text-lg px-8 py-6">
+                <a href="https://api.whatsapp.com/send/?phone=5581999777157&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  CONSULTE AGORA
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-20 bg-accent">
+      <section id="contato" className="py-20 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
-              Entre em <span className="text-primary">Contato</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Agende sua consulta e tire todas as suas dúvidas. Estamos aqui para defender seus direitos com excelência.
-            </p>
-          </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-block bg-primary/10 border border-primary/30 rounded-full px-6 py-2 mb-6">
+                <p className="text-primary font-semibold text-sm uppercase tracking-wider">Fale Conosco</p>
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+                Entre em <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Contato</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Agende sua consulta e tire todas as suas dúvidas. Estamos aqui para defender seus direitos com excelência
+              </p>
+            </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="space-y-8 animate-slide-in-left">
-                <div className="flex items-start space-x-4 hover:scale-105 transition-smooth">
-                  <div className="bg-gradient-blue p-3 rounded-lg shadow-blue animate-float">
-                    <MessageCircle className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">WhatsApp</h3>
-                    <a href="https://api.whatsapp.com/send/?phone=5581999777157&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth hover:scale-105 block">
-                      (81) 99977-7157
-                    </a>
-                    <p className="text-sm text-muted-foreground opacity-75">
-                      Atendimento de segunda a sexta, 9h às 18h
-                    </p>
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Contact Methods */}
+              <div className="space-y-6">
+                {/* WhatsApp */}
+                <div className="group bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-105 border border-blue-100/50 cursor-pointer">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gradient-to-br from-green-500 to-green-600 p-4 rounded-xl shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform duration-300">
+                      <MessageCircle className="h-7 w-7 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-xl text-foreground mb-2">WhatsApp</h3>
+                      <a href="https://api.whatsapp.com/send/?phone=5581999777157&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold text-lg hover:text-primary/80 transition-colors block mb-2">
+                        (81) 99977-7157
+                      </a>
+                      <p className="text-sm text-muted-foreground">
+                        Segunda a sexta, 9h às 18h
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4 hover:scale-105 transition-smooth">
-                  <div className="bg-gradient-blue p-3 rounded-lg shadow-blue animate-float">
-                    <Instagram className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">Instagram</h3>
-                    <a href="https://www.instagram.com/richardrodrigues.adv" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth hover:scale-105 block">
-                      @richardrodrigues.adv
-                    </a>
-                    <p className="text-sm text-muted-foreground opacity-75">Siga para dicas jurídicas</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4 hover:scale-105 transition-smooth">
-                  <div className="bg-gradient-blue p-3 rounded-lg shadow-blue animate-float">
-                    <Linkedin className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/richard-rodrigues-6022a0269" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth hover:scale-105 block">
-                      Dr. Richard Rodrigues
-                    </a>
-                    <p className="text-sm text-muted-foreground opacity-75">Conecte-se profissionalmente</p>
+                {/* Email */}
+                <div className="group bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-105 border border-blue-100/50 cursor-pointer">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-xl shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300">
+                      <Mail className="h-7 w-7 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-xl text-foreground mb-2">Email</h3>
+                      <a href="mailto:contato@drrichardrodrigues.com.br" className="text-primary font-semibold text-lg hover:text-primary/80 transition-colors block mb-2">
+                        contato@drrichardrodrigues.com.br
+                      </a>
+                      <p className="text-sm text-muted-foreground">
+                        Responderemos em até 2h
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4 hover:scale-105 transition-smooth">
-                  <div className="bg-gradient-blue p-3 rounded-lg shadow-blue animate-float">
-                    <MapPin className="h-6 w-6 text-primary-foreground" />
+                {/* Localização */}
+                <div className="group bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-105 border border-blue-100/50 cursor-pointer">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gradient-to-br from-primary to-blue-600 p-4 rounded-xl shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform duration-300">
+                      <MapPin className="h-7 w-7 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-xl text-foreground mb-2">Localização</h3>
+                      <a href="https://www.google.com/maps/search/?api=1&query=R.+do+Imperador+Pedro+II,+346+-+Santo+Antônio,+Recife+-+PE,+50010-240" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:text-primary/80 transition-colors block mb-2">
+                        R. do Imperador Pedro II, 346<br />
+                        Santo Antônio, Recife - PE
+                      </a>
+                      <p className="text-sm text-muted-foreground">
+                        CEP: 50010-240 | Atendimento online e presencial
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">Localização</h3>
-                    <a href="https://www.google.com/maps/search/?api=1&query=R.+do+Imperador+Pedro+II,+346+-+Santo+Antônio,+Recife+-+PE,+50010-240" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth block hover:scale-105">
-                      R. do Imperador Pedro II, 346
-                      <br />
-                      Santo Antônio, Recife - PE
-                      <br />
-                      CEP: 50010-240
+                </div>
+
+                {/* Social Media */}
+                <div className="bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-2xl p-8 border border-primary/20">
+                  <h3 className="font-bold text-lg text-foreground mb-4">Redes Sociais</h3>
+                  <div className="flex gap-4">
+                    <a href="https://www.instagram.com/richardrodrigues.adv" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-110 group">
+                      <Instagram className="h-6 w-6 text-primary group-hover:text-primary/80" />
                     </a>
-                    <p className="text-sm text-muted-foreground opacity-75 mt-2">Atendimento presencial e online</p>
+                    <a href="https://www.linkedin.com/in/richard-rodrigues-6022a0269" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-110 group">
+                      <Linkedin className="h-6 w-6 text-primary group-hover:text-primary/80" />
+                    </a>
+                    <a href="https://www.facebook.com/richardrodriguesadv" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-elegant hover:shadow-blue transition-all duration-300 hover:scale-110 group">
+                      <Facebook className="h-6 w-6 text-primary group-hover:text-primary/80" />
+                    </a>
                   </div>
                 </div>
               </div>
 
-              <ContactForm />
+              {/* Contact Form */}
+              <div className="animate-slide-in-right">
+                <ContactForm />
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Google Maps Section */}
-          <div className="mt-16">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Nossa <span className="text-primary">Localização</span>
-              </h3>
-              <p className="text-muted-foreground">Encontre nosso escritório no coração do Recife</p>
+      {/* Google Maps Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+                Nossa <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Localização</span>
+              </h2>
+              <p className="text-lg text-muted-foreground">Encontre nosso escritório no coração de Recife</p>
             </div>
 
-            <div className="bg-card rounded-xl shadow-elegant border border-primary/10 overflow-hidden">
+            <div className="bg-card rounded-2xl shadow-elegant border border-primary/10 overflow-hidden hover:shadow-blue transition-all duration-300">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.2588419999147!2d-34.87694892404031!3d-8.063439391949359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a1c6b3b3d7%3A0x1e0b0a0a0a0a0a0a!2sR.%20do%20Imperador%20Pedro%20II%2C%20346%20-%20Santo%20Ant%C3%B4nio%2C%20Recife%20-%20PE%2C%2050010-240!5e0!3m2!1spt-BR!2sbr!4v1703875200000!5m2!1spt-BR!2sbr" width="100%" height="400" style={{
               border: 0
             }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Localização do Escritório Dr. Richard Rodrigues" className="w-full" />
             </div>
 
-            <div className="mt-6 text-center">
-              <Button variant="blue" onClick={() => window.open("https://www.google.com/maps/search/?api=1&query=R.+do+Imperador+Pedro+II,+346+-+Santo+Antônio,+Recife+-+PE,+50010-240", "_blank")}>
-                <MapPin className="mr-2 h-5 w-5" />
-                Abrir no Google Maps
+            <div className="mt-8 text-center">
+              <Button asChild variant="blue" size="lg" className="text-lg px-8 py-6">
+                <a href="https://www.google.com/maps/search/?api=1&query=R.+do+Imperador+Pedro+II,+346+-+Santo+Antônio,+Recife+-+PE,+50010-240" target="_blank" rel="noopener noreferrer">
+                  <MapPin className="mr-2 h-5 w-5" />
+                  Abrir no Google Maps
+                </a>
               </Button>
             </div>
           </div>
