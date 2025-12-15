@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Law Firm Design System - Blue & White Theme */
+
+@layer base {
+  :root {
+    /* Base colors - Light professional theme */
+    --background: 210 40% 98%;
+    --foreground: 220 50% 15%;
+
+    /* Card colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 50% 15%;
+
+    /* Popover colors */ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 50% 15%;
+
+    /* Primary - Professional Blue */
+    --primary: 217 91% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Lighter Blue for accents */
+    --secondary: 217 91% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted tones */
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 25% 45%;
+
+    /* Accent - Light blue tint */
+    --accent: 210 50% 95%;
+    --accent-foreground: 217 91% 35%;
+
+    /* Destructive */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 220 20% 88%;
+    --input: 220 20% 92%;
+    --ring: 217 91% 50%;
+
+    /* Professional gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 35%), hsl(217 91% 45%));
+    --gradient-blue: linear-gradient(135deg, hsl(217 91% 50%), hsl(217 91% 60%));
+    --gradient-luxury: linear-gradient(135deg, hsl(210 40% 98%), hsl(210 50% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 30%), hsl(217 91% 40%));
+
+    /* Professional shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(217 91% 35% / 0.15);
+    --shadow-blue: 0 15px 35px -8px hsl(217 91% 50% / 0.25);
+    --shadow-luxury: 0 8px 25px -5px hsl(217 91% 35% / 0.12);
+
+    /* Premium transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    --radius: 0.75rem;
+
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 50% 15%;
+    --sidebar-primary: 217 91% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 50% 95%;
+    --sidebar-accent-foreground: 217 91% 35%;
+    --sidebar-border: 220 20% 88%;
+    --sidebar-ring: 217 91% 50%;
+  }
+
+  .dark {
+    /* Dark mode with professional blue accents */
+    --background: 220 25% 10%;
+    --foreground: 210 40% 98%;
+    --card: 220 25% 14%;
+    --card-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 25% 10%;
+    --secondary: 217 91% 65%;
+    --secondary-foreground: 220 25% 10%;
+    --muted: 220 25% 18%;
+    --muted-foreground: 210 30% 70%;
+    --accent: 220 25% 20%;
+    --accent-foreground: 217 91% 65%;
+    --border: 220 25% 22%;
+    --input: 220 25% 22%;
+    --ring: 217 91% 60%;
+    
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 55%), hsl(217 91% 65%));
+    --gradient-blue: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-luxury: linear-gradient(135deg, hsl(220 25% 12%), hsl(220 25% 16%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 25% 8%), hsl(220 25% 14%));
+    
+    /* Dark shadows */
+    --shadow-elegant: 0 20px 40px -10px hsl(220 25% 5% / 0.5);
+    --shadow-blue: 0 15px 35px -8px hsl(217 91% 60% / 0.3);
+    --shadow-luxury: 0 8px 20px -4px hsl(220 25% 5% / 0.4);
+
+    /* Dark sidebar */
+    --sidebar-background: 220 25% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 220 25% 10%;
+    --sidebar-accent: 220 25% 18%;
+    --sidebar-accent-foreground: 217 91% 65%;
+    --sidebar-border: 220 25% 22%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-blue {
+    background: var(--gradient-blue);
+  }
+  
+  .gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-blue {
+    box-shadow: var(--shadow-blue);
+  }
+  
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .text-blue {
+    color: hsl(var(--secondary));
+  }
+  
+  .border-blue {
+    border-color: hsl(var(--secondary));
+  }
+
+  /* Animation classes */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
